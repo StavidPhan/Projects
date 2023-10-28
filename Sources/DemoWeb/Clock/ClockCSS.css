@@ -1,0 +1,216 @@
+/*tạo định dạng cho thẻ body*/
+
+body{
+  background-color: teal;;
+  padding: 0;
+  margin: 0;
+}
+ 
+
+ /*tạo định dạng cho đồng hồ*/
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  margin: 100px auto 0px auto;
+  position: relative;
+  border: 5px solid #1a0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+
+ /*tạo chấm tròn trung tâm màu đen*/
+.center{
+  background-color: #000;
+  position: absolute;
+  left: calc(50% - 10px);
+  top:  calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+
+/*tạo chấm tròn đỏ cho kim giây*/ 
+.red-center {
+  width: 8px;
+  height: 8px;
+  z-index: 30;
+  background-color: red;
+  left: calc(50% - 4px);
+  top: calc(50% - 4px);
+}
+ 
+
+ /*tạo kim giờ*/
+.hourHand{
+  width: 10px;
+  height: 75px;
+  background-color: #000;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: 75px;
+  left: 145px;
+  z-index: 10;
+  transform: rotate(150deg);
+  animation: hourMove 43200s linear infinite;
+  outline: 100px solid transparent;
+}
+ 
+
+ /*tạo di chuyển cho kim giờ*/
+@keyframes hourMove {
+  0% {
+    transform: rotate(150deg);
+  }
+  100% {
+    transform: rotate(510deg);
+  }
+}
+
+/*tạo kim phút*/ 
+.minuteHand{
+  width: 5px;
+  height: 120px;
+  background-color: #000;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: 30px;
+  left: 147px;
+  z-index: 9;
+  transform: rotate(0);
+  animation: minMove 3600s linear infinite;
+  outline: 100px solid transparent;
+}
+ 
+ /*tạo di chuyển cho kim phút*/
+@keyframes minMove {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+
+ /*tạo kim giây*/
+.secondHand{
+  width: 2px;
+  height: 150px;
+  background-color:red;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: -120px;
+  left: -1px;
+  transition: all 0.06s;
+  z-index: 8;  
+  transform: rotate(0);
+  outline: 100px solid transparent;
+}
+ 
+
+ /*tạo lớp bao đóng cho kim giây*/
+.sec {
+  position: relative;
+  z-index: 30;
+  animation: secMove 60s normal infinite steps(60,end);
+}
+ 
+
+ /*tạo di chuyển cho kim giây*/
+@keyframes secMove {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+
+/*tạo các giá trị giờ*/
+.clock ul{
+  list-style: none;
+  padding: 0;
+ 
+}
+.clock ul li{
+  position: absolute;
+  width:20px;
+  height:20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  columns: #000;
+  font-family: "Droid Serif", serif;
+}
+ 
+
+ /*định dạng vòng tròn số*/
+.clock ul li:nth-child(1){
+  right: 22%;
+  top: 6.5%;
+}
+ 
+.clock ul li:nth-child(2){
+  right: 6%;
+  top: 25%;
+}
+ 
+.clock ul li:nth-child(3){
+  right: 1%;
+  top: calc(50% - 10px);
+}
+ 
+.clock ul li:nth-child(4){
+  right: 6%;
+  top: 69%;
+}
+ 
+.clock ul li:nth-child(5){
+  right: 22%;
+  top: 84%;
+}
+ 
+.clock ul li:nth-child(6){
+  right: calc(50% - 10px);
+  top: calc(99% - 20px);
+}
+ 
+.clock ul li:nth-child(7){
+  left: 22%;
+  top: 84%;
+}
+ 
+.clock ul li:nth-child(8){
+  left: 6%;
+  top: 69%;
+}
+ 
+.clock ul li:nth-child(9){
+  left: 1%;
+  top: calc(50% - 10px);
+}
+ 
+.clock ul li:nth-child(10){
+  left: 6%;
+  top: 25%;
+}
+ 
+.clock ul li:nth-child(11){
+  left: 22%;
+  top: 6.5%;
+}
+ 
+.clock ul li:nth-child(12){
+  right: calc(50% - 10px);
+  top: 1%;
+}

@@ -11,3 +11,4 @@ def sample_response(input):
 #   Có thể thêm các câu hỏi mà người dùng nhập vào ở đây
   
     return "Hỏi gì đó khác đi bro? Hỏi khó như này thì chịu rồi :<"
+
