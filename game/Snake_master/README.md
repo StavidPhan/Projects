@@ -1,9 +1,9 @@
-# Game rắn săn mồi trên điện thoại Nokia(Snake)
-- Demo : https://youtu.be/8rflTMYJlso
+# Game rắn săn mồi tài xỉu(Snake)
 # Mô tả
 - Game rắn săn mồi được viết bằng ngôn ngữ lập trình C.
 - Thư viện sử dụng `winbgim.h`
 - Sử dụng chức năng điều khiển bằng chuột và bàn phím.
+- Khi người rắn ăn được mồi, người chơi sẽ phải đặt cược tài hoặc xỉu, nếu thắng cược, rắn sẽ tăng độ dài bằng với số điểm cược và ngược lại nếu cược thua
 
 # Tính năng
 - [x] Lưu điểm cao và tên người chơi
